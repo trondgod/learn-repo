@@ -1,0 +1,51 @@
+# language: en
+# An user story example to specify a requirement with criteria`s. (Gherkin language. BDD)
+Feature: A descriptive title of the feature
+ In order to achieve a GOAL or a benefit  (can be dropped when obvious)
+ As a ROLE
+ I want/need requiered feature of some reason
+    (add details to make feature easier to understand)
+
+ ### Goal/benefit     – WHY its value/motivation for customer/business.
+ ### Role             – WHO type of user doing the action in a situation, or the one who receive the benefit from the activity.
+ ### Required feature – WHAT the system should be capability of, do some event or activity to meet the requirement.
+ ### A feature’s behavior is simply its accept criteria.
+
+@mytag
+Scenario: A short descriptive title for a specific scenario
+ Given an initial context/condition 
+ When an event trigger start of the scenario
+ Then expected some outcome(s)
+ ### When the system fulfill all accept criteria, it behave correctly regarding defined specification.
+
+# User story is 3 C's:
+# Card, keep it small. A pointer to a requirement
+# Conversation, around a story
+# Conformation. Acceptance test confirm a story is made correct. When is the thing done.
+
+# Details. Conditions of satisfaction
+# Pluralsight
+# https://app.pluralsight.com/library/courses/executable-specifications-specflow/table-of-contents
+
+
+#language: no
+# En historie er utrykt med et eksempel som spesifisere krav med akseptkriterier.
+# Historen er startpunkt for diskusjon og fokus på behovet/problemet
+
+Egenskap: En beskrivende tittel av egenskapen
+ For å oppnå et MÅL eller en fordel    (kan utelates hvis innlysende)
+ med en ROLLE i en situasjon
+ Ønsker/trenger jeg påkrevd egenskap
+  (kan legge til detaljer for lettere å forstå egenskapen)
+
+ ### Mål/fordel      – hvofor verdi/motivasjon for kunden.
+ ### Rolle           – hvem bruker som utfører handlingen i en situasjon, eller den som har nytte av aktiviteten.
+ ### Ønsket egenskap – hva systemet skal tilby å gjøre, feks en hendelse eller aktivitet for å oppnå kravet.
+ ### En egenskap sin oppførsel er akseptkriteriene. Kan bestå av flere scenario med egne akseptansekriterier.
+
+Scenario: Kort beskrivende tittel for scenariet
+ Gitt en innledende situasjon/tilstand
+ Når hendelse utløser start av scenariet
+ Så forvent et eller flere resultat
+ ### Når systemet oppfyller akseptkriteriene, oppfører det seg korrekt mht definert spesifikasjon.
+ 

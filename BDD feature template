@@ -1,3 +1,7 @@
+This template contain an example of how to think and express a feature and its purpose 
+in a clear, simple and understandable manner for both business, tech people. 
+And also be understood by a machine, who can run all feature documents automatically and verify state of System Under Test.
+
 # language: en
 # An user story example to specify a requirement with criteria`s. (Gherkin language. BDD)
 Feature: A descriptive title of the feature

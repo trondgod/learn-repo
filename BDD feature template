@@ -1,17 +1,17 @@
-This template contain an example of how to think and express a feature and its purpose 
-in a clear, simple and understandable manner for both business, tech people. 
-And also be understood by a machine, who can run all feature documents automatically and verify state of System Under Test.
+This template is a tip of how to think and express a domain feature and its purpose 
+in a clear, simple, none-techical and understandable manner for business, dev and test people (Three Amigos). 
+Feature is understood by a machine, who can run all feature documents automatically and verify state of System Under Test.
 
 # language: en
-# An user story example to specify a requirement with criteria`s. (Gherkin language. BDD)
-Feature: A descriptive title of the feature
- In order to achieve a GOAL or a benefit  (can be dropped when obvious)
- As a ROLE
+# A story by example to specify a requirement with criteria`s. (using Gherkin language. BDD)
+Feature: A short descriptive title of the feature in domain language
+ In order to achieve a GOAL or a benefit                                (can be dropped when obvious)
+ As a ROLE or person
  I want/need requiered feature of some reason
     (add details to make feature easier to understand)
 
  ### Goal/benefit     – WHY its value/motivation for customer/business.
- ### Role             – WHO type of user doing the action in a situation, or the one who receive the benefit from the activity.
+ ### Role             – WHO is type of user doing the action in a situation, or the one who receive the benefit from the activity.
  ### Required feature – WHAT the system should be capability of, do some event or activity to meet the requirement.
  ### A feature’s behavior is simply its accept criteria.
 
@@ -22,29 +22,26 @@ Scenario: A short descriptive title for a specific scenario
  Then expected some outcome(s)
  ### When the system fulfill all accept criteria, it behave correctly regarding defined specification.
 
-# User story is 3 C's:
+# A story is 3 C's:
 # Card, keep it small. A pointer to a requirement
 # Conversation, around a story
-# Conformation. Acceptance test confirm a story is made correct. When is the thing done.
-
+# Conformation. Acceptance test confirm a story is made correct. When is the thing actually done.
 # Details. Conditions of satisfaction
-# Pluralsight
-# https://app.pluralsight.com/library/courses/executable-specifications-specflow/table-of-contents
 
 
 #language: no
 # En historie er utrykt med et eksempel som spesifisere krav med akseptkriterier.
 # Historen er startpunkt for diskusjon og fokus på behovet/problemet
 
-Egenskap: En beskrivende tittel av egenskapen
- For å oppnå et MÅL eller en fordel    (kan utelates hvis innlysende)
- med en ROLLE i en situasjon
+Egenskap: En kort beskrivende tittel av egenskapen med domenespråk
+ For å oppnå et MÅL eller en fordel                                       (kan utelates hvis innlysende)
+ som en ROLLE eller person
  Ønsker/trenger jeg påkrevd egenskap
   (kan legge til detaljer for lettere å forstå egenskapen)
 
- ### Mål/fordel      – hvofor verdi/motivasjon for kunden.
- ### Rolle           – hvem bruker som utfører handlingen i en situasjon, eller den som har nytte av aktiviteten.
- ### Ønsket egenskap – hva systemet skal tilby å gjøre, feks en hendelse eller aktivitet for å oppnå kravet.
+ ### Mål/fordel      – HVORFOR verdi/motivasjon for kunden.
+ ### Rolle           – HVEM bruker som utfører handlingen i en situasjon, eller den som har nytte av aktiviteten.
+ ### Ønsket egenskap – HVA systemet skal tilby å gjøre, feks en hendelse eller aktivitet for å oppnå kravet.
  ### En egenskap sin oppførsel er akseptkriteriene. Kan bestå av flere scenario med egne akseptansekriterier.
 
 Scenario: Kort beskrivende tittel for scenariet
@@ -53,3 +50,22 @@ Scenario: Kort beskrivende tittel for scenariet
  Så forvent et eller flere resultat
  ### Når systemet oppfyller akseptkriteriene, oppfører det seg korrekt mht definert spesifikasjon.
  
+An example: 
+Feature: Bank Customer withdraws cash
+As a Bank Customer,
+I want to withdraw cash from an ATM,
+so that I don’t have to wait in line at the bank.
+
+Scenario: The account has sufficient funds
+    Given an account with a balance of $100.5
+    When the Bank Customer requests $20.25
+    Then the account balance should be $80.25
+
+  Scenario: The account has insufficient funds
+    Given an account with a balance of $80.25
+    When the Bank Customer requests $100.75
+    Then the Bank Customer should be notified that overdrafts are not permitted
+
+Resources:
+https://dannorth.net/whats-in-a-story/
+https://app.pluralsight.com/library/courses/executable-specifications-specflow/table-of-contents
